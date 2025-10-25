@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffebf9, #e0f7ff, #fff5da);
+  text-align: center;
+  color: #555;
+  overflow-x: hidden;
+}
+
+header {
+  font-size: 2.5rem;
+  margin-top: 40px;
+  color: #ff7bb0;
+  text-shadow: 2px 2px #fff;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Container for buttons */
+.photo-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 50px auto;
+  max-width: 900px;
+}
+
+.photo-button {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 6px 20px rgba(255, 182, 193, 0.4);
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.photo-button:hover {
+  transform: scale(1.08) rotate(-2deg);
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.6);
+}
+
+.photo-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.photo-button:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  color: #ff7bb0;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 8px 0;
+  border-top: 2px solid #ffd6ff;
+  text-shadow: 1px 1px #fff;
+}
+
+/* Message Box */
+.message-box {
+  margin: 30px auto;
+  padding: 20px 30px;
+  background: #fff8fb;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #ff7bb0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* Floating pastel bubbles */
+.floaty {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: floatyMove 8s infinite alternate ease-in-out;
+}
+
+@keyframes floatyMove {
+  from { transform: translateY(0); }
+  to { transform: translateY(-60px); }
+}
+
+.f1 { width: 100px; height: 100px; background: #ffcad4; top: 10%; left: 8%; animation-delay: 1s; }
+.f2 { width: 140px; height: 140px; background: #b5ead7; top: 30%; right: 10%; animation-delay: 2s; }
+.f3 { width: 80px; height: 80px; background: #c7ceea; bottom: 20%; left: 15%; animation-delay: 3s; }
+.f4 { width: 120px; height: 120px; background: #ffdac1; bottom: 10%; right: 8%; animation-delay: 4s; }
